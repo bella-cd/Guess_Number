@@ -35,6 +35,32 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="@string/guess" />
+
+        <TextView
+            android:id="@+id/textViewAttempts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/attempts_0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <TextView
+            android:id="@+id/textViewGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/games_1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <TextView
+            android:id="@+id/textViewFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            tools:text="Congratulations, You Win!!" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>

@@ -4,4 +4,6 @@
     <string name="enter_number">Enter a number</string>
     <string name="enter_numbers">Enter a number</string>
     <string name="guess">GUESS</string>
+    <string name="attempts_0">Attempts: 0</string>
+    <string name="games_1">Games: 1</string>
 </resources>
