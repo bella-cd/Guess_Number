@@ -8,9 +8,10 @@
     <string name="games_1">Games: 1</string>
     <string name="invalid_number">Invalid Number</string>
     <string name="number_interval_incorrect">\" The number must be between 1 and 10 \"</string>
-    <string name="win_feedback">Congratulation you guessed the number</string>
+    <string name="win_feedback">Congratulation you win !!</string>
     <string name="higher_number_feedback">\" I am thinking on a higher number\"</string>
     <string name="lower_number_feedback">\" I am thinking on a lower number\"</string>
     <string name="attempts">\"Attempts: \"</string>
     <string name="games">\"Games: \"</string>
+    <string name="play_again">Do you want to start a new game?</string>
 </resources>

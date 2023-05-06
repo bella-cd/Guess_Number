@@ -1,11 +1,13 @@
 package pt.ipg.guess_number
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import java.util.Random
 
 class MainActivity : AppCompatActivity() {
@@ -65,7 +67,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun gameEnded() {
+      val dialog = AlertDialog.Builder(this)
+        dialog.setTitle(R.string.win_feedback)
+        dialog.setMessage(getString(R.string.play_again))
 
+        dialog.setPositiveButton(android.R.string.ok, { dialog, which ->  newGame()})
+        dialog.setNegativeButton(android.R.string.cancel, { dialog, which ->  finish()})
+
+        dialog.show()
     }
 
     private fun updateAttempts() {
