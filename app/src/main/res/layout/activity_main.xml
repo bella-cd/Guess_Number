@@ -56,8 +56,9 @@
             android:id="@+id/textViewFeedback"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="center|center_horizontal|top"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             tools:text="Congratulations, You Win!!" />
 

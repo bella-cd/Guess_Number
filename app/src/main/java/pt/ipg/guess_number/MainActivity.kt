@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import java.util.Random
 
@@ -36,12 +37,23 @@ class MainActivity : AppCompatActivity() {
             return
 
         }
+
+        val textViewFeedback = findViewById<TextView>(R.id.textViewFeedback)
+
         if (guess == numberToGuess){
 
-            Toast.makeText(this, "Congratulation you guessed the number", Toast.LENGTH_SHORT).show()
+            textViewFeedback.text = "Congratulation you guessed the number"
+
         }
-        else {
-            Toast.makeText(this, "Wrong guess", Toast.LENGTH_SHORT).show()
+        else if (numberToGuess > guess){
+
+            textViewFeedback.text = " I am thinking on a higher number"
+
+        }
+        else{
+
+            textViewFeedback.text = " I am thinking on a lower number"
+
         }
     }
 
