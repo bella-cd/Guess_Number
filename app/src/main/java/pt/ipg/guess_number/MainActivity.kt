@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     private val random = Random()
     private var numberToGuess = 1
+    private var attempts = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun guess() {
+
         val editTextNumber = findViewById<EditText>(R.id.editTextNumber)
         val guess =  editTextNumber.text.toString().toIntOrNull()
 
@@ -37,6 +39,8 @@ class MainActivity : AppCompatActivity() {
             return
 
         }
+         attempts++
+        updateAttempts()
 
         val textViewFeedback = findViewById<TextView>(R.id.textViewFeedback)
 
@@ -57,7 +61,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun updateAttempts() {
+        val textViewAttempts = findViewById<TextView>(R.id.textViewAttempts)
+        textViewAttempts.text = "Attempts: " + attempts
+    }
+
     private fun newGame() {
         numberToGuess = random.nextInt( 10) + 1
+
+        attempts = 0
+        updateAttempts()
     }
 }
