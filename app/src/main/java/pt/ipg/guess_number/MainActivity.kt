@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
         val guess =  editTextNumber.text.toString().toIntOrNull()
 
         if (guess == null){
-            editTextNumber.error = "Invalid Number"
+            editTextNumber.error = getString(R.string.invalid_number)
             return
         }
 
         if (guess !in 1..10 ){
-            editTextNumber.error = " The number must be between 1 and 10 "
+            editTextNumber.error = getString(R.string.number_interval_incorrect)
             return
 
         }
@@ -46,24 +46,24 @@ class MainActivity : AppCompatActivity() {
 
         if (guess == numberToGuess){
 
-            textViewFeedback.text = "Congratulation you guessed the number"
+            textViewFeedback.text = getString(R.string.win_feedback)
 
         }
         else if (numberToGuess > guess){
 
-            textViewFeedback.text = " I am thinking on a higher number"
+            textViewFeedback.text = getString(R.string.higher_number_feedback)
 
         }
         else{
 
-            textViewFeedback.text = " I am thinking on a lower number"
+            textViewFeedback.text = getString(R.string.lower_number_feedback)
 
         }
     }
 
     private fun updateAttempts() {
         val textViewAttempts = findViewById<TextView>(R.id.textViewAttempts)
-        textViewAttempts.text = "Attempts: " + attempts
+        textViewAttempts.text = getString(R.string.attempts) + attempts
     }
 
     private fun newGame() {
